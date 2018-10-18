@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: clinicbus
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    com.davita.hackathon: DEBUG
+
+meaningfulalerts:
+  url: http://10.186.85.17:8080/api/alerts/create
+

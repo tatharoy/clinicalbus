@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true" scanPeriod="10 minutes">
+    <property name="LOG_PATH" value="logs" />
+    <springProperty scope="context" name="ACTIVE_PROFILE" source="spring.profiles.active"/>
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name"/>
+
+    <timestamp key="timestamp-by-second" datePattern="yyyyMMdd'T'HHmmss"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                <pattern>
+                    %-4relative [%thread] %d{yyyy-MM-dd_HH:mm:ss.SSS} %-5level %logger{35} - %msg %n
+                </pattern>
+            </pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
